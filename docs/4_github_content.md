@@ -19,7 +19,6 @@
    - ###### Copy token in the .env file, key GITHUB_TOKEN 
 
 ## <img style="vertical-align: middle;height:35px; width:35px;"  src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/git-branch.png"> Satellites Repository
-<hr style="height:.2px">
 
 #### <img style="vertical-align: middle;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/folder-tree.png" /> Project structure
 
