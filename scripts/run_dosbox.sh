@@ -9,8 +9,6 @@ fi
 SCRIPT_NAME="$1"
 BAT_FILE="${SCRIPT_NAME}.bat"
 LOG_FILE="/var/satellite/logs/${SCRIPT_NAME}.log"
-#CONFIG_FILE="/var/satellite/data/it/dosbox.conf"
-#IT_DIR="/var/satellite/data/it"
 CONFIG_FILE="/var/satellite/data/github/it/dosbox.conf"
 IT_DIR="/var/satellite/data/github/it"
 

@@ -1,24 +1,20 @@
 #!/bin/bash
 
-# **** REMOVE-ME [VAR] ****
-#COMPILE_AND_RUN="$1"
-#IT_DIR="/var/satellite/data/it"
 IT_DIR="/var/satellite/data/github/it"
-PASSES_DIR="/var/satellite/data/passes"
-PASSES_HTML_DIR="${PASSES_DIR}/html"
-PASSES_TXT_DIR="${PASSES_DIR}/txt"
+PASOS_DIR="/var/satellite/data/pasos"
+PASOS_HTML_DIR="${PASOS_DIR}/html"
+PASOS_TXT_DIR="${PASOS_DIR}/txt"
 JAVA_KEPS_UPDATER_DIR="/var/satellite/data/github/keps_updater"
 JAVA_KEPS_DIR="/var/satellite/data/github/keps"
 SCRIPTS_DIR="/var/satellite/data/github/scripts"
 WEB_DIR="/var/satellite/data/web"
-#ORIGIN_PASSES="/var/satellite/data/origin_passes" 
 
-mkdir -p ${PASSES_DIR}
+mkdir -p ${PASOS_DIR}
 
 chmod -R ugo+rwx ${IT_DIR}
-chmod -R ugo+rwx ${PASSES_DIR}
+chmod -R ugo+rwx ${PASOS_DIR}
 
-mkdir -p ${PASSES_HTML_DIR} ${PASSES_TXT_DIR} 
+mkdir -p ${PASOS_HTML_DIR} ${PASOS_TXT_DIR} 
 
 shopt -s nocaseglob
 htm_files=(${IT_DIR}/pasos*.htm)
@@ -52,20 +48,18 @@ copy_and_lowercase() {
 
 # Process HTML files
 if (( ${#htm_files[@]} )); then
-    copy_and_lowercase $PASSES_HTML_DIR "${htm_files[@]}"
+    copy_and_lowercase $PASOS_HTML_DIR "${htm_files[@]}"
 else
     echo "[WARNING] $(date '+%Y-%m-%d %H:%M:%S') - No matching .htm files found."
 fi
 
 # Process TXT files
 if (( ${#txt_files[@]} )); then
-    copy_and_lowercase ${PASSES_TXT_DIR} "${txt_files[@]}"
+    copy_and_lowercase ${PASOS_TXT_DIR} "${txt_files[@]}"
 else
     echo "[WARNING] $(date '+%Y-%m-%d %H:%M:%S') - No matching .txt files found."
 fi
 
-# Check if COMPILE_AND_RUN is equal to EXECUTE **** REMOVE-ME [IF] ****
-#if [ "$COMPILE_AND_RUN" == "EXECUTE" ]; then
 
 echo "Preparing to compile and run the program..."
 #Execute java update keps
@@ -74,14 +68,11 @@ mkdir -p ${JAVA_KEPS_UPDATER_DIR}/target
 javac -d ${JAVA_KEPS_UPDATER_DIR}/target ${JAVA_KEPS_UPDATER_DIR}/src/amsat/*.java
 java -cp ${JAVA_KEPS_UPDATER_DIR}/target amsat.KepsUpdateRunner
 
-#else
-#  echo "COMPILE_AND_RUN is not EXECUTE, skipping the compile and run process."
-#fi
 
-chmod -R ugo+rwx ${PASSES_DIR}
+chmod -R ugo+rwx ${PASOS_DIR}
 
 # Loop through all .html files in the directory
-find "$PASSES_HTML_DIR" -type f -name '*.html' | while read -r file; do
+find "$PASOS_HTML_DIR" -type f -name '*.html' | while read -r file; do
     echo "Sanitizing: $file"
     
     # Temporary file
@@ -121,7 +112,7 @@ a.click();a.remove();}</script></head><body class=txt onselectstart='return fals
 EOF
 
 # Loop over each HTML file
-for file in "$PASSES_HTML_DIR"/*.html; do
+for file in "$PASOS_HTML_DIR"/*.html; do
     echo "Processing $file..."
     
     awk -v pat="$pattern" -v header="$header" '
@@ -167,7 +158,7 @@ read -r -d '' body <<'EOF'
 EOF
 
 # Loop through all HTML files
-for file in "$PASSES_HTML_DIR"/*.html; do
+for file in "$PASOS_HTML_DIR"/*.html; do
   awk -v start="$BODY_START_MARKER" -v end="$BODY_END_MARKER" -v insert="$body" '
   {
       if (found_end) {
@@ -196,10 +187,10 @@ for file in "$PASSES_HTML_DIR"/*.html; do
 done
 
 # Copy directory contents if it exists
-if [ -d "${PASSES_HTML_DIR}" ]; then
-    cp -r "${PASSES_HTML_DIR}/." "${WEB_DIR}/share/assets"
+if [ -d "${PASOS_HTML_DIR}" ]; then
+    cp -r "${PASOS_HTML_DIR}/." "${WEB_DIR}/share/assets"
 else
-    echo "Directory ${PASSES_HTML_DIR} does not exist. Skipping copy."
+    echo "Directory ${PASOS_HTML_DIR} does not exist. Skipping copy."
 fi
 
 # Copy all.json if it exists
@@ -207,6 +198,13 @@ if [ -f "${JAVA_KEPS_DIR}/output/all.json" ]; then
     cp "${JAVA_KEPS_DIR}/output/all.json" "${WEB_DIR}/share/assets"
 else
     echo "File all.json not found. Skipping copy."
+fi
+
+# Copy keps.txt if it exists
+if [ -f "${JAVA_KEPS_DIR}/output/keps.txt" ]; then
+    cp "${JAVA_KEPS_DIR}/output/keps.txt" "${WEB_DIR}/share/assets"
+else
+    echo "File keps.txt not found. Skipping copy."
 fi
 
 # Copy nasa.all if it exists
@@ -222,14 +220,4 @@ if [ -f "${JAVA_KEPS_DIR}/output/spacetrack1.txt" ]; then
 else
     echo "File spacetrack1.txt not found. Skipping copy."
 fi
-
-# Copy directory contents if it exists
-#if [ -d "${ORIGIN_PASSES}" ]; then
-#    cp -rf "${ORIGIN_PASSES}/." "${IT_DIR}"
-#    echo "[ Origin passes restore to it directory ]"
-#else
-#    echo "Directory ${ORIGIN_PASSES} does not exist. Skipping copy."
-#fi
-
-
 
