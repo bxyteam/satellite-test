@@ -1,6 +1,6 @@
-# <img style="vertical-align:middle; width: 40px; height:40px;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMyNGEwZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS10ZXJtaW5hbC1pY29uIGx1Y2lkZS10ZXJtaW5hbCI+PHBhdGggZD0iTTEyIDE5aDgiLz48cGF0aCBkPSJtNCAxNyA2LTYtNi02Ii8+PC9zdmc+"> Browxy Instalation
+# <img style="vertical-align:middle; width: 40px; height:40px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/terminal.png"> Browxy Instalation
 ---
-### <img style="vertical-align:middle; width:30px; height:30px;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMyNGEwZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1uZXR3b3JrLWljb24gbHVjaWRlLW5ldHdvcmsiPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgcng9IjEiLz48cmVjdCB4PSIyIiB5PSIxNiIgd2lkdGg9IjYiIGhlaWdodD0iNiIgcng9IjEiLz48cmVjdCB4PSI5IiB5PSIyIiB3aWR0aD0iNiIgaGVpZ2h0PSI2IiByeD0iMSIvPjxwYXRoIGQ9Ik01IDE2di0zYTEgMSAwIDAgMSAxLTFoMTJhMSAxIDAgMCAxIDEgMXYzIi8+PHBhdGggZD0iTTEyIDEyVjgiLz48L3N2Zz4="> Apache2
+### <img style="vertical-align:middle; width:30px; height:30px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/network.png"> Apache2
 
 #### Add configuration file to apache2
 
@@ -40,7 +40,7 @@
   sudo bash -c "printf \"127.0.0.1\tsatellites.browxy.com\n\" >> /etc/hosts"
 ```
 
-### <img style="vertical-align:middle; width:30px; height:30px;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMyNGEwZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jdWJvaWQtaWNvbiBsdWNpZGUtY3Vib2lkIj48cGF0aCBkPSJtMjEuMTIgNi40LTYuMDUtNC4wNmEyIDIgMCAwIDAtMi4xNy0uMDVMMi45NSA4LjQxYTIgMiAwIDAgMC0uOTUgMS43djUuODJhMiAyIDAgMCAwIC44OCAxLjY2bDYuMDUgNC4wN2EyIDIgMCAwIDAgMi4xNy4wNWw5Ljk1LTYuMTJhMiAyIDAgMCAwIC45NS0xLjdWOC4wNmEyIDIgMCAwIDAtLjg4LTEuNjZaIi8+PHBhdGggZD0iTTEwIDIydi04TDIuMjUgOS4xNSIvPjxwYXRoIGQ9Im0xMCAxNCAxMS43Ny02Ljg3Ii8+PC9zdmc+"> Build Docker Image
+### <img style="vertical-align:middle; width:30px; height:30px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/cuboid.png"> Build Docker Image
 
 #### Dockerfile
 
@@ -102,7 +102,7 @@ docker build -t docker-registry.beta.browxy.com/browxy_satellite:latest .
   - .env.*
   - /web (web builder folder that contains the files needed to render the HTML page.)
 
-### <img style="vertical-align:middle; width:30px; height:30px;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMyNGEwZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jb250YWluZXItaWNvbiBsdWNpZGUtY29udGFpbmVyIj48cGF0aCBkPSJNMjIgNy43YzAtLjYtLjQtMS4yLS44LTEuNWwtNi4zLTMuOWExLjcyIDEuNzIgMCAwIDAtMS43IDBsLTEwLjMgNmMtLjUuMi0uOS44LS45IDEuNHY2LjZjMCAuNS40IDEuMi44IDEuNWw2LjMgMy45YTEuNzIgMS43MiAwIDAgMCAxLjcgMGwxMC4zLTZjLjUtLjMuOS0xIC45LTEuNVoiLz48cGF0aCBkPSJNMTAgMjEuOVYxNEwyLjEgOS4xIi8+PHBhdGggZD0ibTEwIDE0IDExLjktNi45Ii8+PHBhdGggZD0iTTE0IDE5Ljh2LTguMSIvPjxwYXRoIGQ9Ik0xOCAxNy41VjkuNCIvPjwvc3ZnPg==">  Create And Run Docker Container
+### <img style="vertical-align:middle; width:30px; height:30px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/container.png">  Create And Run Docker Container
 
 #### docker-compose.yml
 
