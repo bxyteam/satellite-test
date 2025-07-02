@@ -17,3 +17,10 @@ else
     echo "Sats directory is missing or empty: ${GITHUB_DIR}/frontend/sats"
 fi
 
+# Copy html assets if source directory exists and has files
+if [ -d "${GITHUB_DIR}/frontend/html" ] && [ "$(ls -A ${GITHUB_DIR}/frontend/html)" ]; then
+    cp ${GITHUB_DIR}/frontend/html/* ${WEB_DIR}/share/assets
+else
+    echo "Sats directory is missing or empty: ${GITHUB_DIR}/frontend/html"
+fi
+
