@@ -1,7 +1,7 @@
 # <img style="vertical-align: middle;height:40px; width:40px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/github.png"> Github Satellites
 
 
-## <img style="vertical-align: middle;height:35px; width:35px;"  src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/settings.png"> Configuration
+### <img style="vertical-align: middle;height:35px; width:35px;"  src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/settings.png"> Configuration
 
 * ###### Add user name in the .env file, key GITHUB_OWNER 
 * ###### Create a new repository
