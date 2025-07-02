@@ -1,6 +1,6 @@
 
-# <img style="vertical-align:middle; width: 40px; height:40px;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMyNGEwZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS10ZXJtaW5hbC1pY29uIGx1Y2lkZS10ZXJtaW5hbCI+PHBhdGggZD0iTTEyIDE5aDgiLz48cGF0aCBkPSJtNCAxNyA2LTYtNi02Ii8+PC9zdmc+"> Local / Dev Instalation
----
+# <img style="vertical-align:middle; width: 40px; height:40px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/terminal.png"> Local / Dev Instalation
+
 ### Apache2
 
 #### Add configuration file to apache2 to enable HTTPS in dev env, need SSL certs
