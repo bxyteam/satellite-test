@@ -114,7 +114,7 @@ services:
   satellite:
     image: docker-registry.beta.browxy.com/browxy_satellite:latest
     env_file:
-      - .env.prod
+      - env.prod
     container_name: satellite
     hostname: satellite
     networks:
@@ -134,9 +134,9 @@ networks:
 
 ```
 
-### Create And Fill Env File (.env.prod)
+### Create And Fill Env File (env.prod)
 
-#### .env.prod
+#### env.prod
 
 ```env
 # Docker Server port
