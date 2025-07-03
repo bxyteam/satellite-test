@@ -8,6 +8,8 @@
 
 <br>
 
+### This application predicts and tracks amateur satellites in real time.
+
 <details open>
     <summary>Table of contents</summary>
     <ul>
