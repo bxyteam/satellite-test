@@ -61,17 +61,8 @@
     </style>
 
 <script>
-    
-//     async function loadAlljson() {
-//        try {
-//           const response = await fetch("https://raw.githubusercontent.com/elPoeta/browxy-assets/refs/heads/main/amsat/dist/all.json");
-//           const data = await response.json();
-//           return data;  
-//        } catch (error) {
-//            return [[]];
-//        } 
-//   }
- window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`; 
+
+window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`; 
  const readAsset = async ({ assetOutputType, assetUrl }) => {
         try {
             return await window.parent.window.readAssetFile({ assetOutputType, assetUrl });
@@ -94,7 +85,7 @@
           assetOutputType: "txt",
           assetUrl: assetUrl,
         });
-        console.log('assetUrlResp',assetUrlResp);
+
         if (assetUrlResp.statusCode !== 200) {
           console.error(assetUrlResp.error);
           return [[]];
@@ -104,7 +95,7 @@
           assetOutputType: "json",
           assetUrl: assetUrlResp.data,
         });
-       console.log('response',response);
+      
         if (response.statusCode !== 200) {
           console.error(response.error);
           return [[]];
