@@ -1,0 +1,12 @@
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - 1_introduction.md
+  - 2_github_configuration.md
+  - 3_github_content.md
+  - 4_instalation_browxy.md
+  - 5_instalation_local_dev.md
+

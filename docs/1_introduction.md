@@ -12,16 +12,16 @@
     <summary>Table of contents</summary>
     <ul>
       <li>
-        <a href="https://github.com/bxyteam/satellite-test/blob/main/docs/4_github_configuration.md">Github Repository Configuration</a>
+        <a href="https://github.com/bxyteam/satellite-test/blob/main/docs/2_github_configuration.md">Github Repository Configuration</a>
       </li>
       <li>
-        <a href="https://github.com/bxyteam/satellite-test/blob/main/docs/5_github_content.md">Github Repository Content</a>
+        <a href="https://github.com/bxyteam/satellite-test/blob/main/docs/3_github_content.md">Github Repository Content</a>
       </li>  
       <li>
-        <a href="https://github.com/bxyteam/satellite-test/blob/main/docs/2_instalation_browxy.md">Browxy Instalation</a>
+        <a href="https://github.com/bxyteam/satellite-test/blob/main/docs/4_instalation_browxy.md">Browxy Instalation</a>
       </li>
       <li>
-        <a href="https://github.com/bxyteam/satellite-test/blob/main/docs/3_instalation_local_dev.md">Local/Dev Instalation</a>
+        <a href="https://github.com/bxyteam/satellite-test/blob/main/docs/5_instalation_local_dev.md">Local/Dev Instalation</a>
       </li>
     </ul>
 </details>
