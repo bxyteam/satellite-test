@@ -6,8 +6,6 @@
 <img  alt="legacy" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/legacy.jpg">
 </p>
 
-<br>
-
 ### This application predicts and tracks amateur satellites in real time.
 
 <details open>
