@@ -45,9 +45,9 @@
 
 ###### Go to the root project directory
 
-### Create And Fill Env File (.env.dev or .env.local)
+### Create And Fill Env File (env.dev or env.local)
 
-#### Rename env.example to .env.dev or .env.local or create new one and fill
+#### Rename env.example to env.dev or env.local or create new one and fill
 
 ```env
 # Docker Server port
