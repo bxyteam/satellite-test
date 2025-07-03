@@ -32,7 +32,4 @@ GITHUB_OWNER=
 
 # github personal token
 GITHUB_TOKEN=
-
-# github download repository url (no need for production, replace GITHUB_OWNER and GITHUB_REPO with your credentials)
-GITHUB_DOWNLOAD_URL=https://github.com/GITHUB_OWNER/GITHUB_REPO/archive/refs/heads/main.zip
 ```
