@@ -4,7 +4,7 @@ relative_links:
   enabled: true
   collections: true
 include:
-  - 1_introduction.md
+  - index.md
   - 2_github_configuration.md
   - 3_github_content.md
   - 4_instalation_browxy.md
