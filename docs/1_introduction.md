@@ -2,8 +2,23 @@
 
 <h3 align="center" style="font-weight:bold; font-style:italic;">A legacy of Pedro Converso</h3>
 <br>
-<p align="center" >
-<img alt="legacy" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/legacy.jpg">
+<p align="center">
+<img  alt="legacy" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/legacy.jpg">
 </p>
 
-<p class="markdown-alert-title" dir="auto"><svg class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
+<br>
+
+<details open>
+    <summary>Table of contents</summary>
+    <ul>
+      <li>
+        <a href="https://github.com/bxyteam/satellite-test/blob/main/docs/2_instalation_browxy.md">Browxy Instalation</a>
+      </li>
+      <li>
+        <a href="https://github.com/bxyteam/satellite-test/blob/main/docs/3_instalation_local_dev.md">Local/Dev Instalation</a>
+      </li>
+      <li>
+        <a href="https://github.com/bxyteam/satellite-test/blob/main/docs/4_github_content.md">Github Conf. and Content</a>
+      </li>
+    </ul>
+</details>
