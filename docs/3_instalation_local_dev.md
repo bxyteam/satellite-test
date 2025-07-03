@@ -68,8 +68,8 @@ GITHUB_TOKEN=
 # path to local repository
 LOCAL_REPO_PATH=/var/satellite/data/github
 
-# github download repository url (no need for production)
-GITHUB_DOWNLOAD_URL=https://github.com/my_github_user/my_github_repo/archive/refs/heads/main.zip
+# github download repository url (no need for production, replace GITHUB_OWNER and GITHUB_REPO with your credentials)
+GITHUB_DOWNLOAD_URL=https://github.com/GITHUB_OWNER/GITHUB_REPO/archive/refs/heads/main.zip
 
 # Spacetrack credentials to update keps and satellite matrix
 
