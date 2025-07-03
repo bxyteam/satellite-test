@@ -12,7 +12,7 @@
     <summary>Table of contents</summary>
     <ul>
       <li>
-        <a href="https://github.com/bxyteam/satellite-test/blob/main/docs/4_github_configuration.md">Github Repository Confugration</a>
+        <a href="https://github.com/bxyteam/satellite-test/blob/main/docs/4_github_configuration.md">Github Repository Configuration</a>
       </li>
       <li>
         <a href="https://github.com/bxyteam/satellite-test/blob/main/docs/5_github_content.md">Github Repository Content</a>
