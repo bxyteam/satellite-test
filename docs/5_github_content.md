@@ -1,6 +1,4 @@
-# <img style="vertical-align: middle;height:40px; width:40px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/github.png"> Github Content
-
-### <img style="vertical-align: middle;height:30px; width:30px;"  src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/git-branch.png"> Repository
+# <img style="vertical-align: middle;height:40px; width:40px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/git-branch.png"> Github Repository Content
 
 #### <img style="vertical-align: middle;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/folder-tree.png" /> Project structure
 
