@@ -1,6 +1,6 @@
 # <img style="vertical-align: middle;height:40px; width:40px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/satellite.png"> Satellites
 
-<h3 style="text-align:center;font-weight:bold;font-style:italic;">
+<h3 align="center" style="text-align:center;font-weight:bold;font-style:italic;">
 A legacy of Pedro Converso
 </h3>
 <br>
