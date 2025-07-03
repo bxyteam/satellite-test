@@ -1,3 +1,7 @@
+---
+title: Local / Dev Instalation
+nav_order: 5
+---
 
 # <img style="vertical-align:middle; width: 40px; height:40px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/terminal.png"> Local / Dev Instalation
 

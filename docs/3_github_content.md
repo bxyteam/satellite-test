@@ -1,3 +1,8 @@
+---
+title: GitHub Repository Content
+nav_order: 3
+---
+
 # <img style="vertical-align: middle;height:40px; width:40px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/git-branch.png"> Github Repository Content
 
 #### <img style="vertical-align: middle;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/folder-tree.png" /> Project structure

@@ -1,3 +1,6 @@
+just_the_docs:
+  color_scheme: "dark"  
+  search_enabled: true
 plugins:
   - jekyll-relative-links
 relative_links:

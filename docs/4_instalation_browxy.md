@@ -1,3 +1,7 @@
+---
+title: Browxy Instalation
+nav_order: 4
+---
 # <img style="vertical-align:middle; width: 40px; height:40px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/terminal.png"> Browxy Instalation
 
 ### <img style="vertical-align:middle; width:30px; height:30px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/network.png"> Apache2
