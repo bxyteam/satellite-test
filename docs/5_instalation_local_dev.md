@@ -53,7 +53,7 @@ nav_order: 5
 
 #### Rename env.example to env.dev or env.local or create new one and fill
 
-```env
+```bash
 # Docker Server port
 
 SERVER_PORT=8090

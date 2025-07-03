@@ -28,7 +28,7 @@ nav_order: 2
 
 ###### fill env file with your github credentials
 
-```env
+```bash
 # github repository name
 GITHUB_REPO=
 

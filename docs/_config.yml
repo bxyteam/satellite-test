@@ -8,9 +8,8 @@ relative_links:
   enabled: true
   collections: true
 
-just_the_docs:
-  color_scheme: "dark"
-  search_enabled: true
+color_scheme: "dark"
+search_enabled: true
 
 include:
   - index.md

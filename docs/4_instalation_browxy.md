@@ -142,7 +142,7 @@ networks:
 
 #### env.prod
 
-```env
+```bash
 # Docker Server port
 
 SERVER_PORT=8090
