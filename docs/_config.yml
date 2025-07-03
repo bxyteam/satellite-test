@@ -9,7 +9,9 @@ relative_links:
   collections: true
 
 color_scheme: "dark"
+dark_mode: true
 search_enabled: true
+nav_enabled: true
 
 include:
   - index.md
