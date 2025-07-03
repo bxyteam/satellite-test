@@ -1,4 +1,4 @@
-# <img style="vertical-align: middle;height:40px; width:40px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/satellite.png"> Satellites
+# <img style="vertical-align: middle;height:40px; width:40px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/satellite.png"> Amateur Satellites Tracks
 
 <h3 align="center" style="font-weight:bold; font-style:italic;">A legacy of Pedro Converso</h3>
 <br>
