@@ -16,8 +16,8 @@ nav_order: 1
 
 ### Web Site
 
-##### https://satellites.dev.browxy.com
+##### <a href="https://satellites.dev.browxy.com">https://satellites.dev.browxy.com</a>
 
 ### Github Repository
 
-##### https://github.com/bxyteam/satellite-test
+##### <a href="https://github.com/bxyteam/satellite-test">https://github.com/bxyteam/satellite-test</a>

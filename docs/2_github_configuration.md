@@ -13,7 +13,7 @@ parent: Introduction
 > * ###### Add user name in the .env file, key GITHUB_OWNER 
 > * ###### Create a new repository
 > * ###### Add repository name in the .env file, key GITHUB_REPO 
-> * ###### Go to https://github.com/settings/personal-access-tokens
+> * ###### <a href="https://github.com/settings/personal-access-tokens">Go to  personal-access-tokens</a>
 >> - ###### Click generate new token
 >>> * ###### Token settings
 >>> * ###### Choose Only select repositories and pick your repo
