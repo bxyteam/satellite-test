@@ -6,10 +6,7 @@ plugins:
 
 title: Amateur Satellites
 description: Amateur Satellites and Satellite Tracking
-baseurl: "" 
-url:  https://satellites.dev.browxy.com
-repository: https://github.com/bxyteam/satellite-test  
-
+ 
 relative_links:
   enabled: true
   collections: true
