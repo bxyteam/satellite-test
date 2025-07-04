@@ -151,10 +151,10 @@ SERVER_PORT=8090
 # Github repository configuration
 
 # github repository name
-GITHUB_REPO=
+GITHUB_REPO=satellite-test
 
 # github repository owner (github username)
-GITHUB_OWNER=
+GITHUB_OWNER=bxyteam
 
 # github personal token
 GITHUB_TOKEN=

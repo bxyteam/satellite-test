@@ -40,7 +40,7 @@ SERVER_PORT=8090
 # Github repository configuration
 
 # github repository name
-GITHUB_REPO=satelitte-test
+GITHUB_REPO=satellite-test
 
 # github repository owner (github username)
 GITHUB_OWNER=bxyteam
