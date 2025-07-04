@@ -19,4 +19,4 @@ nav_enabled: true
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: "Copyright &copy; 1985-2025 Patrick Pedro Converso. Distributed by an <a href=\"https://github.com/bxyteam/satellite-test/main/LICENSE.txt\">MIT license.</a>"
+footer_content: "Copyright &copy; 1985-2025 Pedro Converso. Distributed by an <a href=\"https://github.com/bxyteam/satellite-test/blob/main/LICENSE\">MIT license.</a>"
