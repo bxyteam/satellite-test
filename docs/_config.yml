@@ -6,7 +6,8 @@ plugins:
 
 title: Amateur Satellites
 description: Amateur Satellites and Satellite Tracking
- 
+url: https://satellites.dev.browxy.com
+
 relative_links:
   enabled: true
   collections: true
@@ -15,10 +16,7 @@ color_scheme: "dark"
 search_enabled: true
 nav_enabled: true
 
-#include:
-#  - index.md
-#  - 2_github_configuration.md
-#  - 3_github_content.md
-#  - 4_instalation.md
-  #- 4_1_instalation_browxy.md
-  #- 4_2_instalation_local_dev.md
+back_to_top: true
+back_to_top_text: "Back to top"
+
+footer_content: "Copyright &copy; 1985-2025 Patrick Pedro Converso. Distributed by an <a href=\"https://github.com/bxyteam/satellite-test/main/LICENSE.txt\">MIT license.</a>"
