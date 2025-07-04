@@ -15,10 +15,10 @@ color_scheme: "dark"
 search_enabled: true
 nav_enabled: true
 
-include:
-  - index.md
-  - 2_github_configuration.md
-  - 3_github_content.md
-  - 4_instalation.md
-  - 4_1_instalation_browxy.md
-  - 4_2_instalation_local_dev.md
+#include:
+#  - index.md
+#  - 2_github_configuration.md
+#  - 3_github_content.md
+#  - 4_instalation.md
+  #- 4_1_instalation_browxy.md
+  #- 4_2_instalation_local_dev.md
