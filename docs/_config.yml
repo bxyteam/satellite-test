@@ -4,12 +4,17 @@ plugins:
   - jekyll-remote-theme
   - jekyll-relative-links
 
+title: Amateur Satellites
+description: Amateur Satellites and Satellite Tracking
+baseurl: "" 
+url:  https://satellites.dev.browxy.com
+repository: https://github.com/bxyteam/satellite-test  
+
 relative_links:
   enabled: true
   collections: true
 
 color_scheme: "dark"
-dark_mode: true
 search_enabled: true
 nav_enabled: true
 
@@ -17,5 +22,6 @@ include:
   - index.md
   - 2_github_configuration.md
   - 3_github_content.md
-  - 4_instalation_browxy.md
-  - 5_instalation_local_dev.md
+  - 4_instalation.md
+  - 4_1_instalation_browxy.md
+  - 4_2_instalation_local_dev.md
