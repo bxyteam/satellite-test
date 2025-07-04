@@ -24,8 +24,8 @@ public class SpaceTrackReader {
 	private List<String> cookies = new ArrayList<String>();
 	private HttpsURLConnection conn;
 	private final String USER_AGENT = "Mozilla/5.0";
-    private final static String SPACE_TRACK_INPUT_FILE = System.getEnv("LOCAL_REPO_PATH") + "/keps/spacetrack1.txt";
-    private final static String SPACE_TRACK_OUTPUT_FILE = System.getEnv("LOCAL_REPO_PATH") + "/keps/spacetrack2.txt";
+    private final static String SPACE_TRACK_INPUT_FILE = System.getenv("LOCAL_REPO_PATH") + "/keps/spacetrack1.txt";
+    private final static String SPACE_TRACK_OUTPUT_FILE = System.getenv("LOCAL_REPO_PATH") + "/keps/spacetrack2.txt";
     
 	public static void run() {
 
