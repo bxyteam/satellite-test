@@ -1,7 +1,7 @@
 ---
 title: GitHub Configuration
-nav_order: 2
-parent: Introduction
+nav_order: 1
+parent: Github
 ---
 
 # <img style="vertical-align: middle;height:40px; width:40px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/github.png"> Github Configuration

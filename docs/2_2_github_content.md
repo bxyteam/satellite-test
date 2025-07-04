@@ -1,7 +1,7 @@
 ---
 title: GitHub Repository Content
-nav_order: 3
-parent: Introduction
+nav_order: 2
+parent: Github
 ---
 
 # <img style="vertical-align: middle;height:40px; width:40px;" src="https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/docs/images/git-branch.png"> Github Repository Content
