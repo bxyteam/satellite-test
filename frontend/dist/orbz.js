@@ -1417,7 +1417,7 @@ var Orb = {
               (c = saveClassName)),
           savebox == E.title &&
             ((E.style.backgroundRepeat = "no-repeat"),
-            (E.style.backgroundImage = `url(${imageSrcUrl['box']})`)),
+            (E.style.backgroundImage = `url(${imageSrcUrl['box1']})`)),
           null == aostime[g[w].number - 1] &&
             (aostime[g[w].number - 1] = addMinutes(
               g[w].dateTimeStart,
@@ -4180,7 +4180,7 @@ function sh(e, a) {
           firstclick || "noclick" != a || savesatid != e
             ? PLib.tleData.length > 2 &&
               ((l.style.backgroundImage =
-                `url(${imageSrcUrl['box']})`),
+                `url(${imageSrcUrl['box1']})`),
               (savebox = satname))
             : (l.style.backgroundImage = "");
       }

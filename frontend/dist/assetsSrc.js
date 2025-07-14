@@ -4,6 +4,7 @@ var imageSrcUrl = {
   "birdoff": "https://i.postimg.cc/MTNDr63p/birdoff.gif", 
   "birdon": "https://i.postimg.cc/nLV0XwQp/birdon.gif",
   "box": "https://i.postimg.cc/yxRTMM2X/box.gif",
+  "box1": "https://i.postimg.cc/QMNBJt8Z/box1.gif",
   "bubble": "https://i.postimg.cc/PfvKvDNp/bubble.gif",
   "cal": "https://i.postimg.cc/gk9sV06M/cal.gif",
   "chat": "https://i.postimg.cc/sDpcwRY3/chat.gif",

@@ -4,6 +4,7 @@ var imageSrcUrl = {
   "birdoff": "https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/frontend/images/birdoff.gif", 
   "birdon": "https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/frontend/images/birdon.gif",
   "box": "https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/frontend/images/box.gif",
+  "box1": "https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/frontend/images/box1.gif",
   "bubble": "https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/frontend/images/bubble.gif",
   "cal": "https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/frontend/images/cal.gif",
   "chat": "https://raw.githubusercontent.com/bxyteam/satellite-test/refs/heads/main/frontend/images/chat.gif",
