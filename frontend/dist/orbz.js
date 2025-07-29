@@ -4019,8 +4019,21 @@ async function load() {
         (document.getElementById("ty6").innerText = cuentaf.replace(/ /g, ""));
   }
 
+  resizeAndScale();
+
   document.querySelector('#spinner-overlay').style.display = 'none';
 }
+
+function resizeAndScale() {
+  const isMobileOrTablet =
+      /Mobi|Android|Tablet|iPad|iPhone/i.test(navigator.userAgent) ||
+      screen.availWidth < 750;
+    
+    if (isMobileOrTablet) {
+      screensize();
+    }
+}
+
 function onlysat(e) {
   for (k = 1; k < PLib.tleData.length; k++)
     recoversat = recoversat + PLib.tleData[k][1].substr(2, 5) + ",";
