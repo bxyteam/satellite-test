@@ -264,7 +264,7 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
                 <td colspan=2 align="center" class="tit" style="width:540px;height:22px;">
                     Check or change your <img src="https://i.postimg.cc/nzjK78Vb/home.gif" Alt="Your Location" 
                         style="height:18px; vertical-align:middle;z-index: 1;border:0px;">&nbsp;&nbsp;Station Grid
-                    Locator&nbsp;&nbsp;or Latitude/Longitude&nbsp;<a href="#Top">
+                    Locator&nbsp;&nbsp;or Latitude/Longitude&nbsp;<a href="#Top" onclick="event.preventDefault();window.scrollTo({top: 0,behavior: 'smooth'});">
                         <span style="color:#00ffff;font-size:18px;font-weight:normal;" Title="GO UP"><b>&#x25B2;</b>
                         </span>
                     </a>&nbsp;&nbsp;
@@ -285,7 +285,7 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
                     &nbsp;<input style="font-weight:bold;" type="Reset" value="Reset" class="det2" id="Button1"
                         name="Button1" onclick="javascript:document.getElementById('mapa').innerHTML = ' �.ddd'">
                     &nbsp;<input type="button" style="font-weight:bold;" value="Resolve and Set New"
-                        onclick="locator(this.form,'1');localat=form.lat.value;localon=form.lon.value;Orb.setHomeCoordinates(form.lat.value,form.lon.value);Orb.generateTable(document.getElementById('passes'));document.location.href='#top';saveMapState('yes');"
+                        onclick="locator(this.form,'1');localat=form.lat.value;localon=form.lon.value;Orb.setHomeCoordinates(form.lat.value,form.lon.value);Orb.generateTable(document.getElementById('passes'));window.scrollTo({ top:0, behavior: 'smooth'});saveMapState('yes');"
                         class=det2 id="button2" name="button2">
                     
                 </td>
