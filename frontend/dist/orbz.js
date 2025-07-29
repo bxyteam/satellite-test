@@ -158,13 +158,13 @@ let graficos = !isAndroid236;
 
 if (isIphone && !gqs("locator")) {
   alert(
-    "To use Pass with iPhone, start with:\nhttp://amsat.org.ar/pass?locator=xxxxxx\nUsing your own locator for xxxxxx"
+    "To use Pass with iPhone, start with:\nhttps://satellittes.browxy.com/pass?locator=xxxxxx\nUsing your own locator for xxxxxx"
   );
 }
 
 if (isIpad && !gqs("locator")) {
   alert(
-    "To use Pass with iPad, start with:\nhttp://amsat.org.ar/pass?locator=xxxxxx\nUsing your own locator for xxxxxx"
+    "To use Pass with iPad, start with:\nhttps://satellittes.browxy.com/pass?locator=xxxxxx\nUsing your own locator for xxxxxx"
   );
 }
 
