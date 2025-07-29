@@ -196,8 +196,8 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
         Hora Local</div>
     <div class="noprint" id="linkos"
         style="position:absolute;top:0px;left:325px;width:250px;font-size:14px;line-height:16px;font-family:Tahoma,Arial;font-weight:bold;color:#ffffff;vertical-align:text-top;z-index:1;">
-        <a href="#change"
-            title="Change or set new Grid Locator Insure you have right Timezone and Date/Time on your device. OK! if Home Icon at your place"><span
+        <a href="#change" onclick="event.preventDefault(); document.getElementById('change').scrollIntoView({ behavior: 'smooth' });" 
+             title="Change or set new Grid Locator Insure you have right Timezone and Date/Time on your device. OK! if Home Icon at your place"><span
                 style="color:#00ffff;">Locator</span></a>&nbsp;
         <a href="#" id="reload"
             onclick='saveMapState();satactivity=satactivity+"RELOAD\/";if (!vbasic){location.reload();}'
@@ -257,8 +257,8 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
     <div class="noprint" id="elevatio" title="Show Elevations > 0 Click here to change" onclick="changeelevation();"
         style="position:absolute;width:42px;height:32px;top:270px;left:373px;z-index:1;color:#00ffff;cursor:pointer;font-family:'Arial Black';font-weight:bolder;font-size:20px;line-height:22px;white-space:nowrap;">
         |___|</div>
-    <a href="#" id="change"></a>
-    <form name="wwl" action="pass.htm" style="margin-bottom:0;margin-top:0;">
+    <a href="#" id="change" onclick="event.preventDefault();"></a>
+    <form name="wwl" style="margin-bottom:0;margin-top:0;">
         <table class="noprint" style="text-align:left; border:0px; padding:0; background-color:#C4DCB3;width:540px;">
             <tr class=tit style="height:22px;">
                 <td colspan=2 align="center" class="tit" style="width:540px;height:22px;">
@@ -337,8 +337,7 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
     <div class="noprint" id="trackingdata"
         style="position:absolute;border:0px;background-color:#172447;top:21px;left:546px;height:60px;width:190px;color:#ffffff;font-family:Tahoma,Arial;font-size:18px;font-weight:bold;line-height:17px;z-index: 2;">
         <center>Click <img src="https://i.postimg.cc/ZqKnX6Xw/saticon2.gif" alt="Click satellite Icon"
-                style="border:0px;width:25px;line-height:18px;"> Satellite<br>To see Az/El/Freq<br>Click <a
-                href="#change">
+                style="border:0px;width:25px;line-height:18px;"> Satellite<br>To see Az/El/Freq<br>Click <a href="#change" onclick="event.preventDefault(); document.getElementById('change').scrollIntoView({ behavior: 'smooth' });">
                 <img src="https://i.postimg.cc/nzjK78Vb/home.gif" title="Click to change Grid Locator"
                     alt="Click to change Grid Locator" style="width:18px;height:18px;line-height:18px;border:0px;">
             </a> to set QTH
