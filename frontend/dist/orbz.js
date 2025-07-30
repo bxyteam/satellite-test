@@ -38,6 +38,8 @@ var lastdatetime,
   birdsw = !0;
 rotorsw = !0;
 var alljs = [[]];
+var satelliteNames = [];
+var selectedSatellites = [];
 
 for (
   var localtime = !0,
@@ -4024,6 +4026,7 @@ async function load() {
   }
 
   resizeAndScale();
+  addSatSelectorListeners();
 
   document.querySelector('#spinner-overlay').style.display = 'none';
 }
@@ -4037,6 +4040,143 @@ function resizeAndScale() {
       screensize();
     }
 }
+
+// Sat Selector 
+
+function addSatSelectorListeners() {
+  document.getElementById('searchInput').addEventListener('input', (e) => {
+    searchSatellites(e.target.value);
+  });
+
+  document.getElementById('searchInput').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const firstResult = document.getElementById('resultsContainer').querySelector('.result-item');
+      if (firstResult) {
+        const satelliteName = firstResult.textContent;
+        selectSatellite(satelliteName);
+      }
+    }
+  });
+
+  document.getElementById('overlaySatSelector').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('overlaySatSelector')) {
+      closeSelector();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && document.getElementById('overlaySatSelector').style.display === 'flex') {
+      closeSelector();
+    }
+  });
+
+
+  document.getElementById('searchInput').addEventListener('touchstart', function (e) {
+    e.preventDefault();
+    this.focus();
+  });
+
+  document.addEventListener('touchstart', function () { }, true);
+}  
+
+function openSelector() {
+  satelliteNames = alljs.map(item => replacesatname(item[0]).split(" ")[0].trim());
+  document.getElementById('overlaySatSelector').style.display = 'flex';
+  document.getElementById('searchInput').focus();
+  updateSelectedDisplay();
+  updateAcceptButton();
+  document.querySelector('body').style.position = "fixed";
+}
+
+function closeSelector() {
+  document.getElementById('overlaySatSelector').style.display = 'none';
+  document.getElementById('searchInput').value = '';
+  document.querySelector('body').style.position = "unset";
+  document.getElementById('resultsContainer').innerHTML = '<div class="empty-message">Type to search for satellites...</div>';
+}
+
+function searchSatellites(query) {
+  if (!query.trim()) {
+    document.getElementById('resultsContainer').innerHTML = '<div class="empty-message">Type to search for satellites...</div>';
+    return;
+  }
+
+  const filteredSatellites = satelliteNames.filter(name =>
+    name.toLowerCase().includes(query.toLowerCase()) &&
+    !selectedSatellites.includes(name)
+  );
+
+  if (filteredSatellites.length === 0) {
+    document.getElementById('resultsContainer').innerHTML = '<div class="empty-message">No satellites found</div>';
+    return;
+  }
+
+  document.getElementById('resultsContainer').innerHTML = filteredSatellites
+    .map(name => `<div class="result-item" onclick="selectSatellite('${name}')">${name}</div>`)
+    .join('');
+}
+
+function selectSatellite(name) {
+  if (!selectedSatellites.includes(name)) {
+    selectedSatellites.push(name);
+    updateSelectedDisplay();
+    updateAcceptButton();
+
+    // Limpiar búsqueda y refrescar resultados
+    const currentQuery = document.getElementById('searchInput').value;
+    searchSatellites(currentQuery);
+  }
+}
+
+function removeSatellite(name) {
+  selectedSatellites = selectedSatellites.filter(satellite => satellite !== name);
+  updateSelectedDisplay();
+  updateAcceptButton();
+
+  // Refrescar resultados de búsqueda
+  const currentQuery = document.getElementById('searchInput').value;
+  searchSatellites(currentQuery);
+}
+
+function updateSelectedDisplay() {
+  if (selectedSatellites.length === 0) {
+    document.getElementById('selectedItems').innerHTML = '<div class="empty-message">No satellites selected</div>';
+    return;
+  }
+
+  document.getElementById('selectedItems').innerHTML = selectedSatellites
+    .map(name => `
+                    <div class="selected-item">
+                        ${name}
+                        <button class="remove-btn" onclick="removeSatellite('${name}')">&times;</button>
+                    </div>
+                `).join('');
+}
+
+function updateAcceptButton() {
+  if (selectedSatellites.length > 0) {
+    document.getElementById('acceptBtn').classList.add('enabled');
+    document.getElementById('acceptBtn').textContent = `Accept (${selectedSatellites.length})`;
+  } else {
+    document.getElementById('acceptBtn').classList.remove('enabled');
+    document.getElementById('acceptBtn').textContent = 'Accept';
+  }
+}
+
+function acceptSelection() {
+  if (selectedSatellites.length === 0) return;
+
+  const satelliteParams = selectedSatellites.join(',');
+  const encodedParams = encodeURI(satelliteParams);
+  const url = `?satx=${encodedParams}`;
+  const newLocation = `${window.parent.window.location.origin}${window.parent.window.location.pathname}${url}`;
+  closeSelector();
+  window.parent.window.location.href = newLocation;
+
+}
+
+// End Sat selector
 
 function onlysat(e) {
   for (k = 1; k < PLib.tleData.length; k++)

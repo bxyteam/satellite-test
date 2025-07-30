@@ -480,6 +480,46 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
                 </table>
             </div>
     </div>
+
+    <button class="sel-sat-button" onclick="openSelector()">
+        🛰️ Open Satellittes Selector
+    </button>
+
+    <div class="overlay-sat-selector" id="overlaySatSelector">
+        <div class="selector-container">
+            <div class="header">
+                <h2 class="title">🛰️ Satellite Selector</h2>
+                <button class="close-btn" onclick="closeSelector()">&times;</button>
+            </div>
+
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    id="searchInput" 
+                    placeholder="Search for satellites..."
+                    autocomplete="off"
+                >
+                <span class="search-icon">🔍</span>
+            </div>
+
+            <div class="results-container" id="resultsContainer">
+                <div class="empty-message">Type to search for satellites...</div>
+            </div>
+
+            <div class="selected-section">
+                <h3 class="selected-title">Selected Satellites:</h3>
+                <div class="selected-items" id="selectedItems">
+                    <div class="empty-message">No satellites selected</div>
+                </div>
+            </div>
+
+            <div class="buttons-container">
+                <button class="cancel-btn" onclick="closeSelector()">Cancel</button>
+                <button class="accept-btn" id="acceptBtn" onclick="acceptSelection()">Accept</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
