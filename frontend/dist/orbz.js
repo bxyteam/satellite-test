@@ -2259,6 +2259,10 @@ function enterfreq(e) {
 function test() {
   alert("test");
 }
+function scrollToElement(e, hashId) {
+  e.preventDefault(); 
+  document.getElementById(hashId).scrollIntoView({ behavior: 'smooth' });
+}
 function loadMapState() {
   if (
     ((localat = (splitStr = getCookie("passCookie").split("_"))[0]),

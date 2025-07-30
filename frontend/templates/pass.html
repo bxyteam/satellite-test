@@ -139,7 +139,7 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
     <div id="spinner-overlay" class="spinner-overlay">
       <div class="spinner"></div>
     </div>
-    <a href="#top" id="A1"></a>
+    <a href="#top" id="A1" onclick="event.preventDefault();"></a>
     <noscript><span
             style="font-size:22px;font-family:arial;font-weight:bold;color:#00ffff;"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Allow
             Javascript to use PASS<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;then you
@@ -185,10 +185,10 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
         style="position:absolute; width: 22px; height: 22px; top:244px; left: 211px; cursor:pointer;">
         <form name='tstest' method='post' style='margin-bottom:0;margin-top:0;'>
             <input type='Text' style='visibility:hidden' name='timestamp' id='timestamp' value=''>
-            <a href="javascript:show_calendar('document.tstest.timestamp', document.tstest.timestamp.value);">
+            <button onclick="show_calendar('document.tstest.timestamp', document.tstest.timestamp.value);">
                 <img id='cal' src='https://i.postimg.cc/gk9sV06M/cal.gif' style="width:16px; height:24px; border:0px;"
                     alt='Click Here to Pick up the timestamp'>
-            </a>
+            </button>
         </form>
     </div>
     <div class="noprint" id="hora"
@@ -196,35 +196,35 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
         Hora Local</div>
     <div class="noprint" id="linkos"
         style="position:absolute;top:0px;left:325px;width:250px;font-size:14px;line-height:16px;font-family:Tahoma,Arial;font-weight:bold;color:#ffffff;vertical-align:text-top;z-index:1;">
-        <a href="#change" onclick="event.preventDefault(); document.getElementById('change').scrollIntoView({ behavior: 'smooth' });" 
+        <button onclick="scrollToElement(event, 'change');" class="btn-hash-link" 
              title="Change or set new Grid Locator Insure you have right Timezone and Date/Time on your device. OK! if Home Icon at your place"><span
-                style="color:#00ffff;">Locator</span></a>&nbsp;
-        <a href="#" id="reload"
-            onclick='saveMapState();satactivity=satactivity+"RELOAD\/";if (!vbasic){location.reload();}'
-            title="Reload / Refresh and Update TLEs"><span style="color:#00ffff;">Reload</span></a>&nbsp;
-        <a href="#" onclick='event.preventDefault(); showkeps();' Title="Add/Del Satellites - See Keps in use"><span
-                style="color:#00ffff;">&plusmn;Sats</span></a>&nbsp;
-        <a href="#" title="Sats Detail" onclick="event.preventDefault(); versats(1);"><span style='color:#00ffff;'>SD</span></a>&nbsp;
-        <a href="#" title="Application Description  In several languages" onclick="event.preventDefault(); showhelp();"><span
-                style="color:#ffff00;font-weight:bold;font-family:'Arial Narrow',Tahoma">Help</span></a>&nbsp;
+                style="color:#00ffff;">Locator</span></button>&nbsp;
+        <button class="btn-hash-link" id="reload"
+            onclick='saveMapState();satactivity=satactivity+"RELOAD"; location.reload();'
+            title="Reload / Refresh and Update TLEs"><span style="color:#00ffff;">Reload</span></button>&nbsp;
+        <button class="btn-hash-link" onclick='event.preventDefault(); showkeps();' Title="Add/Del Satellites - See Keps in use"><span
+                style="color:#00ffff;">&plusmn;Sats</span></button>&nbsp;
+        <button class="btn-hash-link" title="Sats Detail" onclick="event.preventDefault(); versats(1);"><span style='color:#00ffff;'>SD</span></button>&nbsp;
+        <button class="btn-hash-link" title="Application Description  In several languages" onclick="event.preventDefault(); showhelp();"><span
+                style="color:#ffff00;font-weight:bold;font-family:'Arial Narrow',Tahoma">Help</span></button>&nbsp;
     </div>
     <div class="noprint" id="zooms"
         style="position:absolute;top:0px;left:578px;width:262px;font-size:17px;line-height:20px;font-family:Tahoma,Arial;font-weight:normal;color:#ffffff;vertical-align:text-top;z-index:6;white-space:nowrap;">
         &nbsp;
         
-        <a href="#" title="Zoom x 1" class="xz" id="z1" onclick="event.preventDefault();setzoom(1);"
-            style="font-size:11px;">1</a>&nbsp;<a href="#" title="Zoom x 2" class="xz" id="z1.5"
-            onclick="event.preventDefault();setzoom(1.5);" style="font-size:13px;">2</a>&nbsp;<a href="#"
-            title="Zoom x 3" class="xz" id="z2.2" onclick="event.preventDefault();setzoom(2.2);"
-            style="font-size:14px;">3</a>&nbsp;<a href="#" title="Zoom x 4" class="xz" id="z3.5"
-            onclick="event.preventDefault();setzoom(3.5);" style="font-size:15px;">4</a>&nbsp;<a href="#"
-            title="Zoom x 6" class="xz" id="z5.3" onclick="event.preventDefault();setzoom(5.3);"
-            style="font-size:16px;">6</a>&nbsp;<a href="#" title="Zoom x 8" class="xz" id="z8"
-            onclick="event.preventDefault();setzoom(8);" style="font-size:17px;">8</a>&nbsp;<a href="#"
-            title="Zoom x 16" class="xz" id="z16" onclick="event.preventDefault();setzoom(16);"
-            style="font-size:18px;">H</a>
-        <a href="#" title="Screen Size" id="sz" onclick="event.preventDefault();screensize();"
-            style="cursor:pointer;color:Aqua;font-size:19px;font-weight:bold;">&#9651;</a>
+        <button title="Zoom x 1" class="btn-hash-link xz" id="z1" onclick="event.preventDefault();setzoom(1);"
+            style="font-size:11px;">1</button>&nbsp;<button title="Zoom x 2" class="btn-hash-link xz" id="z1.5"
+            onclick="event.preventDefault();setzoom(1.5);" style="font-size:13px;">2</button>&nbsp;<button
+            title="Zoom x 3" class="btn-hash-link xz" id="z2.2" onclick="event.preventDefault();setzoom(2.2);"
+            style="font-size:14px;">3</button>&nbsp;<button title="Zoom x 4" class="btn-hash-link xz" id="z3.5"
+            onclick="event.preventDefault();setzoom(3.5);" style="font-size:15px;">4</button>&nbsp;<button
+            title="Zoom x 6" class="btn-hash-link xz" id="z5.3" onclick="event.preventDefault();setzoom(5.3);"
+            style="font-size:16px;">6</button>&nbsp;<button title="Zoom x 8" class="btn-hash-link xz" id="z8"
+            onclick="event.preventDefault();setzoom(8);" style="font-size:17px;">8</button>&nbsp;<button
+            title="Zoom x 16" class="btn-hash-link xz" id="z16" onclick="event.preventDefault();setzoom(16);"
+            style="font-size:18px;">H</button>
+        <button title="Screen Size" id="sz" onclick="event.preventDefault();screensize();"
+            style="cursor:pointer;color:Aqua;font-size:19px;font-weight:bold;">&#9651;</button>
     </div>
     <div class="noprint" id="birds"
         style="position:absolute;top:3px;left:738px;width:44px;font-size:16px;line-height:13px;font-family:Courier New,Tahoma,Arial;font-weight:bold;color:#ffffff;vertical-align:text-top;z-index:6;text-align:center;white-space:nowrap;">
@@ -247,27 +247,27 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
         style="position:absolute;left:570px;top:42px;width:170px;height:60px;visibility:hidden;z-index:7;background-image: url(https://i.postimg.cc/PfvKvDNp/bubble.gif);font-family:Arial,Tahoma;font-size:18px;font-weight:bold;line-height:24px;">
     </div>
     <div class="noprint" id="printicon"
-        style="position:absolute;left:413px;top:272px;width:24px;height:21px;cursor:pointer;z-index:111;border:0px;"><a
-            href="#" onclick="javascript:printpr();"><img src="https://i.postimg.cc/T3tn42pv/printicon.gif"
+        style="position:absolute;left:413px;top:272px;width:24px;height:21px;cursor:pointer;z-index:111;border:0px;"><button
+            onclick="printpr();"><img src="https://i.postimg.cc/T3tn42pv/printicon.gif"
                 alt="Print this Table, Click Print Preview to see results"
-                title="Print this Table, Click Print Preview to see results"></a></div>
+                title="Print this Table, Click Print Preview to see results"></button></div>
     <div class="noprint" id="localtime" title="click to change Local/UTC" onclick="localgmt();"
         style="position:absolute;width:130px;height:32px;top:270px;left:249px;z-index:1;color:#00ffff;cursor:pointer;font-family:'Arial Black';font-weight:bolder;font-size:22px;line-height:22px;white-space:nowrap;">
         |__________|</div>
     <div class="noprint" id="elevatio" title="Show Elevations > 0 Click here to change" onclick="changeelevation();"
         style="position:absolute;width:42px;height:32px;top:270px;left:373px;z-index:1;color:#00ffff;cursor:pointer;font-family:'Arial Black';font-weight:bolder;font-size:20px;line-height:22px;white-space:nowrap;">
         |___|</div>
-    <a href="#" id="change" onclick="event.preventDefault();"></a>
+    <div id="change"></div>
     <form name="wwl" style="margin-bottom:0;margin-top:0;">
         <table class="noprint" style="text-align:left; border:0px; padding:0; background-color:#C4DCB3;width:540px;">
             <tr class=tit style="height:22px;">
                 <td colspan=2 align="center" class="tit" style="width:540px;height:22px;">
                     Check or change your <img src="https://i.postimg.cc/nzjK78Vb/home.gif" Alt="Your Location" 
                         style="height:18px; vertical-align:middle;z-index: 1;border:0px;">&nbsp;&nbsp;Station Grid
-                    Locator&nbsp;&nbsp;or Latitude/Longitude&nbsp;<a href="#Top" onclick="event.preventDefault();window.scrollTo({top: 0,behavior: 'smooth'});">
+                    Locator&nbsp;&nbsp;or Latitude/Longitude&nbsp;<button onclick="scrollToElement(event, 'A1');" class="btn-hash-link">
                         <span style="color:#00ffff;font-size:18px;font-weight:normal;" Title="GO UP"><b>&#x25B2;</b>
                         </span>
-                    </a>&nbsp;&nbsp;
+                    </button>&nbsp;&nbsp;
                     <a href="#" onclick='event.preventDefault();golocator();' target="_self" title="Grid Locator Map">
                         <span
                             style="color:#00ffff;font-size:14px;text-decoration:underline;font-weight:bold;">Grid?</span>
@@ -337,10 +337,10 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
     <div class="noprint" id="trackingdata"
         style="position:absolute;border:0px;background-color:#172447;top:21px;left:546px;height:60px;width:190px;color:#ffffff;font-family:Tahoma,Arial;font-size:18px;font-weight:bold;line-height:17px;z-index: 2;">
         <center>Click <img src="https://i.postimg.cc/ZqKnX6Xw/saticon2.gif" alt="Click satellite Icon"
-                style="border:0px;width:25px;line-height:18px;"> Satellite<br>To see Az/El/Freq<br>Click <a href="#change" onclick="event.preventDefault(); document.getElementById('change').scrollIntoView({ behavior: 'smooth' });">
+                style="border:0px;width:25px;line-height:18px;"> Satellite<br>To see Az/El/Freq<br>Click <button onclick="scrollToElement(event, 'change');" class="btn-hash-link">
                 <img src="https://i.postimg.cc/nzjK78Vb/home.gif" title="Click to change Grid Locator"
                     alt="Click to change Grid Locator" style="width:18px;height:18px;line-height:18px;border:0px;">
-            </a> to set QTH
+                </button> to set QTH
         </center>
     </div>
     <div id="Logging" style="left:0px;width:210px;visibility:hidden;"></div>
@@ -452,29 +452,29 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
                             <span class="noprint" style="font-family:Tahoma,Arial;font-size:19px;color:#ffffff;text-decoration:underline;font-weight:bold;line-height:24px;">
                                 <b>&nbsp;Downlinks/Uplinks&nbsp;</b><br>
                             </span>
-                            <a href="#" onclick="openInNewTab(event,'satiss');"><b>ARISS</b></a>&nbsp;&nbsp;PK:145.825 FM<br>
+                            <button class="btn-link" onclick="openInNewTab(event,'satiss');"><b>ARISS</b></button>&nbsp;&nbsp;PK:145.825 FM<br>
                               &nbsp;&nbsp;Voice&nbsp;&nbsp;DU:145.800 FM<p>DU:437.800 FM</p><p>PK:145.99-.80</p><br>
-                             <a href="#" onclick="openInNewTab(event,'satao-07a');"><b>AO-07</b></a> U:145.850-950<br>Mode A D:29.400-29.5<br><p>B:29.502 CW</p>
-                             <a href="#" onclick="openInNewTab(event,'satao-07b');"><b>AO-07</b></a> U:432.125-175<br>Mode B D:145.975-925<p>B:145.9775 CW</p><br>
-                             <a href="#" onclick="openInNewTab(event,'satfo-29');"><b>FO-29</b></a> U:145.900-146<br>USB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D:435.800-900<p>B:435.795 CW</p><br>
-                             <a href="#" onclick="openInNewTab(event,'satjo-97');"><b>JO-97</b></a> U:435.100-120<br>USB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D:145.855-875<p>B:435.795 CW</p><br>
-                             <a href="#" onclick="openInNewTab(event,'satao-73');"><b>AO-73</b></a> U:435.160-140<br>USB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D:145.950-970<p>B:145.935 CW</p><br>
-                             <a href="#" onclick="openInNewTab(event,'satrs-44')"><b>RS-44</b></a> U:145.900-146<br>USB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D:435.600-700<p>B:435.604 CW</p><br>
-                             <a href="#" onclick="openInNewTab(event,'satso-50');"><b>SO-50</b></a> U:145.850 67Hz<br>FM&nbsp;&nbsp;&nbsp;&nbsp;D:436.795 74.4Hz<br><br>
-                             <a href="#" onclick="openInNewTab(event,'satpo101');"><b>PO101</b></a>&nbsp;&nbsp;U:437.500 FM<br>141.3Hz D:145.900 FM<br><p>&nbsp;B:145.900 CW</p><br>
-                             <a href="#" onclick="openInNewTab(event,'satso121');"><b>SO121</b></a> U:145.875 FM<br>FM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>D:436.663 FM</p><p>B:436.663 CW</p><br>
-                             <a href="#" onclick="openInNewTab(event,'satxw-2c');"><b>AO-91</b></a> U:435.250 67Hz<br>FM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D:145.961 .4W<br><br>
-                             <a href="#" onclick="openInNewTab(event,'satxw-2c');"><b>XW-2C</b></a> U:435.150-170<br>USB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D:145.795-815<p>B:145.790 CW</p><br>
-                             <a href="#" onclick="openInNewTab(event,'satxw-2d');"><b>XW-2D</b></a> U:435.210-230<br>USB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D:145.860-880<p>B:145.855 CW</p><br>
-                             <a href="#" onclick="openInNewTab(event,'satcas4a');"><b>CAS4A</b></a> B:145.855 CW<p>B:145.835 AX</p><br>
-                             <a href="#" onclick="openInNewTab(event,'satcas4b');"><b>CAS4B</b></a> U:435.270-290<br>USB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D:145.915-935<p>B:145.910 CW</p><p>B:145.890 AX</p><br>
-                             <a href="#" onclick="openInNewTab(event,'satio-117');"><b>IO117</b></a> U:436.750 PKT<br><p> D:436.750 PKT</p><p>1K2/4K8 GMSK</p><br>
-                             <a href="#" onclick="openInNewTab(event,'satio-86');"><b>IO-86</b></a>&nbsp;&nbsp;U:435.880 FM<br><p>D:145.880 FM</p><p>B:145.825 CW</p><p>B:145.825 AX</p><br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satao-07a');"><b>AO-07</b></button> U:145.850-950<br>Mode A D:29.400-29.5<br><p>B:29.502 CW</p>
+                             <button class="btn-link" onclick="openInNewTab(event,'satao-07b');"><b>AO-07</b></button> U:432.125-175<br>Mode B D:145.975-925<p>B:145.9775 CW</p><br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satfo-29');"><b>FO-29</b></button> U:145.900-146<br>USB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D:435.800-900<p>B:435.795 CW</p><br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satjo-97');"><b>JO-97</b></button> U:435.100-120<br>USB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D:145.855-875<p>B:435.795 CW</p><br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satao-73');"><b>AO-73</b></button> U:435.160-140<br>USB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D:145.950-970<p>B:145.935 CW</p><br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satrs-44')"><b>RS-44</b></button> U:145.900-146<br>USB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D:435.600-700<p>B:435.604 CW</p><br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satso-50');"><b>SO-50</b></button> U:145.850 67Hz<br>FM&nbsp;&nbsp;&nbsp;&nbsp;D:436.795 74.4Hz<br><br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satpo101');"><b>PO101</b></button>&nbsp;&nbsp;U:437.500 FM<br>141.3Hz D:145.900 FM<br><p>&nbsp;B:145.900 CW</p><br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satso121');"><b>SO121</b></button> U:145.875 FM<br>FM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>D:436.663 FM</p><p>B:436.663 CW</p><br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satxw-2c');"><b>AO-91</b></button> U:435.250 67Hz<br>FM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D:145.961 .4W<br><br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satxw-2c');"><b>XW-2C</b></button> U:435.150-170<br>USB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D:145.795-815<p>B:145.790 CW</p><br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satxw-2d');"><b>XW-2D</b></button> U:435.210-230<br>USB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D:145.860-880<p>B:145.855 CW</p><br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satcas4a');"><b>CAS4A</b></button> B:145.855 CW<p>B:145.835 AX</p><br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satcas4b');"><b>CAS4B</b></button> U:435.270-290<br>USB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D:145.915-935<p>B:145.910 CW</p><p>B:145.890 AX</p><br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satio-117');"><b>IO117</b></button> U:436.750 PKT<br><p> D:436.750 PKT</p><p>1K2/4K8 GMSK</p><br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satio-86');"><b>IO-86</b></button>&nbsp;&nbsp;U:435.880 FM<br><p>D:145.880 FM</p><p>B:145.825 CW</p><p>B:145.825 AX</p><br>
                              -- Transmit only Sats --<br>
-                             <a href="#" onclick="openInNewTab(event,'satlo19');"><b>LO-19</b></a> B:437.125 CW<br>
-                             <a href="#" onclick="openInNewTab(event,'satna15');"><b>NA-15</b></a> D:137.620 APT<br>
-                             <a href="#" onclick="openInNewTab(event,'satna18');"><b>NA-18</b></a> D:137.9125 APT<br>
-                             <a href="#" onclick="openInNewTab(event,'satna19');"><b>NA-19</b></a> D:137.100 APT
+                             <button class="btn-link" onclick="openInNewTab(event,'satlo19');"><b>LO-19</b></button> B:437.125 CW<br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satna15');"><b>NA-15</b></button> D:137.620 APT<br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satna18');"><b>NA-18</b></button> D:137.9125 APT<br>
+                             <button class="btn-link" onclick="openInNewTab(event,'satna19');"><b>NA-19</b></button> D:137.100 APT
                         </td>   
                     </tr>  
                 </table>

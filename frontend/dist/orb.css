@@ -35,15 +35,24 @@ a:link{text-decoration:none;}
   /* Good browsers */
   opacity: 0.17;
 }
-.xz 
-{
-z-index: 6;
-color: cyan;
+.btn-hash-link {
+  all: unset; 
+  color: #00ffff; 
+  cursor: pointer;
+}
+.btn-hash-link:hover {
+  background: red;
 } 
+.xz {
+  z-index: 6;
+  color: cyan;
+}
+.btn-hash-link.xz, 
 a.xz:link {
   color: cyan ;
   background-color: transparent ;
 }
+.btn-link.xz:hover,
 a.xz:hover {
   color: red ;
   background-color: yellow ;
@@ -56,8 +65,7 @@ a.xz:focus {
   color: red ;
   background-color: yellow ;
 }
-.arrow 
-{
+.arrow {
     color: #00ffff ;
     font-size: 12px ;
     font-weight: bold;
@@ -75,6 +83,10 @@ a:active {
   color: #ffffff; 
   background-color: red ;
 }
+.btn-link {
+  all: unset; 
+}
+.btn-link,
 a:link {
   color: #ffffff ;
   background-color: transparent ;
@@ -83,6 +95,7 @@ a:visited {
   color: #ffffff ;
   background-color: transparent ;
 }
+.btn-link:hover,
 a:hover {
   color: #ffffff ;
   background-color: red ;
@@ -107,7 +120,7 @@ IMG.disp {
         font-size:12px;
         font-weight:bold;
         cursor:pointer;
-    }
+    }  
 
 @media print 
 {
