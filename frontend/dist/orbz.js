@@ -160,13 +160,13 @@ let graficos = !isAndroid236;
 
 if (isIphone && !gqs("locator")) {
   alert(
-    "To use Pass with iPhone, start with:\nhttps://satellittes.browxy.com/pass?locator=xxxxxx\nUsing your own locator for xxxxxx"
+    "To use Pass with iPhone, start with:\nhttps://satellites.browxy.com/pass?locator=xxxxxx\nUsing your own locator for xxxxxx"
   );
 }
 
 if (isIpad && !gqs("locator")) {
   alert(
-    "To use Pass with iPad, start with:\nhttps://satellittes.browxy.com/pass?locator=xxxxxx\nUsing your own locator for xxxxxx"
+    "To use Pass with iPad, start with:\nhttps://satellites.browxy.com/pass?locator=xxxxxx\nUsing your own locator for xxxxxx"
   );
 }
 
@@ -2504,6 +2504,7 @@ function versats(e) {
   }
   
   const navigationButtons = shouldOmit ? '' : `
+   <div style="display: flex;gap: 10px;flex-wrap: wrap;align-items: center;">
     <button class='btn-ghost botonch' style="color:#000000;background-color:#9fef86;padding: 8px 4px;font-size: 14px;" onclick='event.preventDefault();versats(0);'>
       &nbsp;SSB Linear&nbsp;
     </button>&nbsp;&nbsp;&nbsp;
@@ -2527,7 +2528,7 @@ function versats(e) {
     </button>&nbsp;&nbsp;&nbsp;
     <button class='btn-ghost botonch' style="color:#ffffff;padding: 8px 4px;font-size: 14px;background-color:#222222;" onclick='event.preventDefault();versats(9);'>
       &nbsp;UnClasif&nbsp;&nbsp;
-    </button>&nbsp;&nbsp;&nbsp;`;
+    </button></div>&nbsp;&nbsp;&nbsp;`;
   
   let title = "";
   switch(e) {
