@@ -5,7 +5,7 @@
 
 ### Web Site
 
-##### https://satellites.dev.browxy.com
+##### https://satellites.browxy.com
 
 ### Github Repository
 

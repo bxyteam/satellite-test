@@ -6,7 +6,7 @@ plugins:
 
 title: Amateur Satellites
 description: Amateur Satellites and Satellite Tracking
-url: https://satellites.dev.browxy.com
+url: https://satellites.browxy.com
 
 relative_links:
   enabled: true

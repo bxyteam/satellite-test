@@ -121,8 +121,8 @@ var satfreqpointer = 0,
   dateset = !1,
   yellowcount = 0,
   losMeses = "EneFebMarAbrMayJunJulAgoSetOctNovDic",
-  birdhelp = `<a href='#' title='Click for additional\nfrequency changes' onclick='event.preventDefault();if(vbasice){vbasice=false}else{vbasice=true}'>Zoom</a><br>
-    <a href=# onclick="event.preventDefault();changeorder();" title="- Change Order -&#13 0: By AGE asc.&#13 1: By NAME asc.&#13 2: By NAME desc&#13 3: By AGE desc" style="color:#00ffff;cursor:pointer;">Sort`;
+  birdhelp = `<button class="btn-ghost" title='Click for additional\nfrequency changes' onclick='event.preventDefault();if(vbasice){vbasice=false}else{vbasice=true}'>Zoom</button><br>
+    <button class="btn-ghost" onclick="event.preventDefault();changeorder();" title="- Change Order -&#13 0: By AGE asc.&#13 1: By NAME asc.&#13 2: By NAME desc&#13 3: By AGE desc" style="color:#00ffff;cursor:pointer;">Sort`;
   window.name = "pass";
 
 var  rando = ("00" + Math.floor(100 * Math.random())).slice(-2),
@@ -320,8 +320,8 @@ function show_calendar(e, a) {
       const dateStr = dt2dtstr(workingDate);
       
       calendarRows += `  <td bgcolor="${cellBgColor}" align="center">`;
-      calendarRows += `<a href="javascript:getTimeValue();window.opener.${e}.value='${dateStr}'+timeValue; window.opener.cambiofecha(); window.close();">`;
-      calendarRows += `<font color="${fontColor}" face="tahoma, verdana" size="2">${workingDate.getDate()}</font></a></td>\n`;
+      calendarRows += `<button class="btn-ghost" onclick="event.preventDefault();getTimeValue();window.opener.${e}.value='${dateStr}'+timeValue; window.opener.cambiofecha(); window.close();">`;
+      calendarRows += `<font color="${fontColor}" face="tahoma, verdana" size="2">${workingDate.getDate()}</font></button></td>\n`;
       
       workingDate.setDate(workingDate.getDate() + 1);
     }
@@ -340,17 +340,17 @@ function show_calendar(e, a) {
             <table cellspacing="1" cellpadding="3" border="0" width="100%">
               <tr>
                 <td bgcolor="#4682B4">
-                  <a href="javascript:getTimeValue();window.opener.show_calendar('${e}', '${dt2dtstr(prevMonth)}'+timeValue);">
+                  <button classs="btn-th-icon" onclick="event.preventDefault();getTimeValue();window.opener.show_calendar('${e}', '${dt2dtstr(prevMonth)}'+timeValue);">
                     <img src="${imageSrcUrl.prev}" width="16" height="16" border="0" alt="previous month">
-                  </a>
+                  </button>
                 </td>
                 <td align="center" bgcolor="#4682B4" colspan="5">
                   <font color="white" face="tahoma, verdana" size="3">${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}</font>
                 </td>
                 <td bgcolor="#4682B4" align="right">
-                  <a href="javascript:getTimeValue();window.opener.show_calendar('${e}', '${dt2dtstr(nextMonth)}'+timeValue);">
+                  <button classs="btn-th-icon" onclick="event.preventDefault();getTimeValue();window.opener.show_calendar('${e}', '${dt2dtstr(nextMonth)}'+timeValue);">
                     <img src="${imageSrcUrl.next}" width="16" height="16" border="0" alt="next month">
-                  </a>
+                  </button>
                 </td>
               </tr>
               ${calendarRows}
@@ -509,7 +509,7 @@ var Orb = {
           (document.getElementById("graphics").innerHTML =
             `<img src="${imageSrcUrl['arrow']}" border=2 style="border-color:#ffffff;width:180px;height:180px;border-radius: 6px 6px 6px 6px;" width=180 height=180 title="Tracking satellites" alt="Tracking satellites">`),
           (document.getElementById("trackingdata").innerHTML =
-            `<center>Click <img src="${imageSrcUrl['saticon2']}" border=0 width="25px" style="width:25px;"> Satellite<br>To see Az/El/Freq<br>Click <a href=#change><img src="${imageSrcUrl['home']}" title="Click to change Grid Locator" width=18px height="18px" border=0 style="width:18px;height:18px;"></a> to set QTH</center>`),
+            `<center>Click <img src="${imageSrcUrl['saticon2']}" border=0 width="25px" style="width:25px;"> Satellite<br>To see Az/El/Freq<br>Click <button class="btn-hash-link"  onclick="scrollToElement(event, 'change');"><img src="${imageSrcUrl['home']}" title="Click to change Grid Locator" width=18px height="18px" border=0 style="width:18px;height:18px;"></button> to set QTH</center>`),
           (document.getElementById("azel").innerHTML = ""),
           (document.getElementById("uplinkdownlink").style.top = "268px");
       }),
@@ -665,7 +665,7 @@ var Orb = {
           .innerHTML.replace(/MOON/, ""));
   },
   createSatelliteMarkers: function () {
-    (birds = birdhelp + 1 * order + "</a><br>"),
+    (birds = birdhelp + 1 * order + "</button><br>"),
       (birdsb =
         "<a href='https://www.amsat.org/status/' target='_blank' title='See Active Sats' onclick=\"javascript:satactivity=satactivity+'LIVE/';\" style='color:cyan;'>Live?</a><br>");
     for (var e = 1; e <= PLib.sat.length; e++)
@@ -1197,7 +1197,7 @@ var Orb = {
                 (document.getElementById("graphics").innerHTML =
                   `<img src="${imageSrcUrl['arrow']}" border=2 style="border-color:#ffffff;width:180px;height:180px;border-radius: 6px 6px 6px 6px;" width=180 height=180 title="Tracking satellites" alt="Tracking satellites">`),
                 (document.getElementById("trackingdata").innerHTML =
-                  `<center>Click <img src="${imageSrcUrl['saticon2']}" border=0 width="25px" style="width:25px;"> Satellite<br>To see Az/El/Freq<br>Click <a href=#change><img src="${imageSrcUrl['home']}" title="Click to change Grid Locator" width=18px height="18px" border=0 style="width:18px;height:18px;"></a> to set QTH</center>`),
+                  `<center>Click <img src="${imageSrcUrl['saticon2']}" border=0 width="25px" style="width:25px;"> Satellite<br>To see Az/El/Freq<br>Click <buton onclick="scrollToElement(event, 'A1');" class="btn-ghost"><img src="${imageSrcUrl['home']}" title="Click to change Grid Locator" width=18px height="18px" border=0 style="width:18px;height:18px;"></button> to set QTH</center>`),
                 (document.getElementById("azel").innerHTML = ""),
                 (document.getElementById("uplinkdownlink").style.top = "268px"),
                 (autoclick = !1),
@@ -1277,7 +1277,7 @@ var Orb = {
             "Next passes at your location. Starting at " +
             tablelasttime.toTimeString())
         : ((document.getElementById("Div1").innerHTML =
-            '<a href=\'#\' onclick="location.reload()"><b><u><font style="color:#FF0000;background-color:#FFFFFF;font-size:12px;font-weight:bold;">&nbsp;Keps are old, click Reload.</font></u></b></a> Starting at ' +
+            '<button classs="btn-ghost"  onclick="window.parent.window.location.reload()"><b><u><font style="color:#FF0000;background-color:#FFFFFF;font-size:12px;font-weight:bold;">&nbsp;Keps are old, click Reload.</font></u></b></button> Starting at ' +
             tablelasttime.toTimeString()),
           (warntoken += 1) < 2 && (satactivity += "KepsOld/"))),
       (timespan = ((864e5 / 2.3) * 42) / (1.27 * PLib.tleData.length + 1)),
@@ -1489,7 +1489,7 @@ function changeorder(e) {
         newlink));
   for (
     "nolog" != e && (satactivity = satactivity + "Order" + 1 * order + "/"),
-      birds = birdhelp + 1 * order + "</a><br>",
+      birds = birdhelp + 1 * order + "</button><br>",
       0 == order &&
         sortm.sort(function (e, a) {
           var l = e.substr(6, 5),
@@ -2487,9 +2487,9 @@ function versats(e) {
         fff += `
           <tr ${rowStyle}>
             <td align=center style="padding:4px 0px;font-weight:bold;font-size:14px;">
-              <a href='#' onclick="event.preventDefault();updateKepDisplay('${kepis.replace(/'/g, "\\'")}');" style="color:blue;">
+              <button class="btn-ghost" onclick="event.preventDefault();updateKepDisplay('${kepis.replace(/'/g, "\\'")}');" style="color:blue;">
                 ${alljs[p][1].substring(2, 7)}
-              </a>
+              </button>
             </td>
             <td align=center style="padding:4px 0px;font-weight:bold;font-size:14px;">${alljs[p][1].substring(8, 15)}</td>
             <td align=center style="padding:4px 0px;font-weight:bold;font-size:14px;">${anio}${alljs[p][1].substring(9, 11)}</td>
@@ -2504,30 +2504,30 @@ function versats(e) {
   }
   
   const navigationButtons = shouldOmit ? '' : `
-    <a href='#' class='botonch' style="color:#000000;background-color:#9fef86;padding: 8px 4px;font-size: 14px;" onclick='event.preventDefault();versats(0);'>
+    <button class='btn-ghost botonch' style="color:#000000;background-color:#9fef86;padding: 8px 4px;font-size: 14px;" onclick='event.preventDefault();versats(0);'>
       &nbsp;SSB Linear&nbsp;
-    </a>&nbsp;&nbsp;&nbsp;
-    <a href='#' class='botonch' style="color:#000000;padding: 8px 4px;font-size: 14px;background-color:#ffff62;" onclick='event.preventDefault();versats(7);'>
+    </button>&nbsp;&nbsp;&nbsp;
+    <button class='btn-ghost botonch' style="color:#000000;padding: 8px 4px;font-size: 14px;background-color:#ffff62;" onclick='event.preventDefault();versats(7);'>
       &nbsp;SSB + FM&nbsp;
-    </a>&nbsp;&nbsp;&nbsp;
-    <a href='#' class='botonch' style="color:#000000;padding: 8px 4px;font-size: 14px;background-color:#ff6af7;" onclick="event.preventDefault();versats(1);;">
+    </button>&nbsp;&nbsp;&nbsp;
+    <button class='btn-ghost botonch' style="color:#000000;padding: 8px 4px;font-size: 14px;background-color:#ff6af7;" onclick="event.preventDefault();versats(1);;">
       &nbsp;FM Voice&nbsp;
-    </a>&nbsp;&nbsp;&nbsp;
-    <a href='#' class='botonch' style="color:#000000;padding: 8px 4px;font-size: 14px;background-color:#ffb084;" onclick='event.preventDefault();versats(2);'>
+    </button>&nbsp;&nbsp;&nbsp;
+    <button class='btn-ghost botonch' style="color:#000000;padding: 8px 4px;font-size: 14px;background-color:#ffb084;" onclick='event.preventDefault();versats(2);'>
       &nbsp;FM Digital&nbsp;
-    </a>&nbsp;&nbsp;&nbsp;
-    <a href='#' class='botonch' style="color:#000000;padding: 8px 4px;font-size: 14px;background-color:#9ae1ff;" onclick='event.preventDefault();versats(3);'>
+    </button>&nbsp;&nbsp;&nbsp;
+    <button class='btn-ghost botonch' style="color:#000000;padding: 8px 4px;font-size: 14px;background-color:#9ae1ff;" onclick='event.preventDefault();versats(3);'>
       &nbsp;XMT Only&nbsp;
-    </a>&nbsp;&nbsp;&nbsp;
-    <a href='#' class='botonch' style="color:#000000;padding: 8px 4px;font-size: 14px;background-color:#61c761;" onclick='event.preventDefault();versats(4);'>
+    </button>&nbsp;&nbsp;&nbsp;
+    <button class='btn-ghost botonch' style="color:#000000;padding: 8px 4px;font-size: 14px;background-color:#61c761;" onclick='event.preventDefault();versats(4);'>
       &nbsp;Weather&nbsp;
-    </a>&nbsp;&nbsp;&nbsp;
-    <a href='#' class='botonch' style="color:#000000;padding: 8px 4px;font-size: 14px;background-color:#e2e2e2;" onclick='event.preventDefault();versats(6);'>
+    </button>&nbsp;&nbsp;&nbsp;
+    <button class='btn-ghost botonch' style="color:#000000;padding: 8px 4px;font-size: 14px;background-color:#e2e2e2;" onclick='event.preventDefault();versats(6);'>
       &nbsp;ALL Sats&nbsp;
-    </a>&nbsp;&nbsp;&nbsp;
-    <a href='#' class='botonch' style="color:#ffffff;padding: 8px 4px;font-size: 14px;background-color:#222222;" onclick='event.preventDefault();versats(9);'>
+    </button>&nbsp;&nbsp;&nbsp;
+    <button class='btn-ghost botonch' style="color:#ffffff;padding: 8px 4px;font-size: 14px;background-color:#222222;" onclick='event.preventDefault();versats(9);'>
       &nbsp;UnClasif&nbsp;&nbsp;
-    </a>&nbsp;&nbsp;&nbsp;`;
+    </button>&nbsp;&nbsp;&nbsp;`;
   
   let title = "";
   switch(e) {
@@ -2625,7 +2625,7 @@ function versats(e) {
               .replace(/<br>/g, e == 6 ? "" : "&nbsp;")
               .replace(/&nbsp;&nbsp;/g, "&nbsp;");
             
-            cellContent = `&nbsp;<a href='#' onclick="event.preventDefault();updateKepDisplay('${kepis.replace(/'/g, "\\'")}');" style="color:blue;">${processedContent}</a>`;
+            cellContent = `&nbsp;<button class='btn-ghost' onclick="event.preventDefault();updateKepDisplay('${kepis.replace(/'/g, "\\'")}');" style="color:blue;">${processedContent}</button>`;
           } else {
             // Other columns
             let processedContent = freq[i][j]
@@ -2945,7 +2945,7 @@ function showhelp() {
         <li>Keplerian sont mis à jour seul, les satellites actifs habituels sont présentés.</li>
         <li>En cliquant sur <b><u>'+Sats'</u></b> sur l'écran, vous pouvez ajouter ou supprimer des satellites.</li>
         <li>PASS peut être utilisé dans le domaine, même sans internet fonctionne sur tout appareil.</li>
-        <li>Si utilisez le <a href='pass.exe' Title='Télécharger ou Executér pass.exe program' target=_blank style='color:#facc2e;'>PASS.EXE</a> avec <a href='wispdde.exe' Title='Télécharger ou Executér wispDDE Driver' target=_blank style='color:#facc2e;'>wispDDE</a>, pouvez contrôler les rotors et votre émetteurs-récepteurs.</li>
+        <li>Si utilisez le <a href='#' Title='Télécharger ou Executér pass.exe program' onclick="event.preventDefault();" style='color:#facc2e;'>PASS.EXE</a> avec <a href='#' Title='Télécharger ou Executér wispDDE Driver' onclick="event.preventDefault();" style='color:#facc2e;'>wispDDE</a>, pouvez contrôler les rotors et votre émetteurs-récepteurs.</li>
         <li>Si ne prenez pas le locator, commencer a ajouter a l'url ?localat=xx.xxxx&localon=yy.yyyy .</li>
         <li>Si vous voulez commencer avec un satellite spécifique ajouter à l'url ?sat=XXXXX .</li>
         <li>Pour voir un seul sat double-cliquer sur un sat, pour revoir tous, double-cliquer encore.</li>
@@ -3053,16 +3053,16 @@ function showhelp() {
   
    const menuLang = document.createElement('div');
    menuLang.innerHTML =`<div style="padding: 8px 4px;margin-top: 5px;">
-    <a href="#english" onclick="event.preventDefault();switchHelpLanguage('english');">English</a>&nbsp;&nbsp;
-    <a href="#espanol" onclick="event.preventDefault();switchHelpLanguage('espanol');">Espa&ntilde;ol</a>&nbsp;&nbsp;
-    <a href="#portugues" onclick="event.preventDefault(); switchHelpLanguage('portugues');">Portugu&eacute;s</a>&nbsp;&nbsp;
-    <a href="#deutsche" onclick="event.preventDefault();switchHelpLanguage('deutsche');">Deutsch</a>&nbsp;&nbsp;
-    <a href="#italiano" onclick="event.preventDefault();switchHelpLanguage('italiano');">Italiano</a>&nbsp;&nbsp;
-    <a href="#frances" onclick="event.preventDefault();switchHelpLanguage('frances');">Fran&ccedil;ais</a>&nbsp;&nbsp;
-    <a href="#russian" onclick="event.preventDefault();switchHelpLanguage('russian');">Russian</a>&nbsp;&nbsp;
-    <a href="#turkish" onclick="event.preventDefault();switchHelpLanguage('turkish');">Turkish</a>&nbsp;&nbsp;
-    <a href="#chinesse" onclick="event.preventDefault();switchHelpLanguage('chinesse');">Chinese</a>&nbsp;&nbsp;
-    <a href="#japanese" onclick="event.preventDefault();switchHelpLanguage('japanese');">Japanese</a>
+    <button class='btn-ghost' onclick="event.preventDefault();switchHelpLanguage('english');">English</button>&nbsp;&nbsp;
+    <button class='btn-ghost' onclick="event.preventDefault();switchHelpLanguage('espanol');">Espa&ntilde;ol</button>&nbsp;&nbsp;
+    <button class='btn-ghost' onclick="event.preventDefault(); switchHelpLanguage('portugues');">Portugu&eacute;s</button>&nbsp;&nbsp;
+    <button class='btn-ghost' onclick="event.preventDefault();switchHelpLanguage('deutsche');">Deutsch</button>&nbsp;&nbsp;
+    <button class='btn-ghost' onclick="event.preventDefault();switchHelpLanguage('italiano');">Italiano</button>&nbsp;&nbsp;
+    <button class='btn-ghost' onclick="event.preventDefault();switchHelpLanguage('frances');">Fran&ccedil;ais</button>&nbsp;&nbsp;
+    <button class='btn-ghost' onclick="event.preventDefault();switchHelpLanguage('russian');">Russian</button>&nbsp;&nbsp;
+    <button class='btn-ghost' onclick="event.preventDefault();switchHelpLanguage('turkish');">Turkish</button>&nbsp;&nbsp;
+    <button class='btn-ghost' onclick="event.preventDefault();switchHelpLanguage('chinesse');">Chinese</button>&nbsp;&nbsp;
+    <button class='btn-ghost' onclick="event.preventDefault();switchHelpLanguage('japanese');">Japanese</a>
    </div>`;
 
   // Create language content area
@@ -3479,7 +3479,7 @@ function showkeps(e) {
               <input type="button" name="buscobutton" id="keps-buscobutton" value="Search" onclick="kepsOverlayFunctions.buscar()" style="font-size:13px;font-weight:normal;line-height:13px;height:20px;">
               &nbsp;Click Sats to Add/Del from predictions and click 
               <input type="button" style="font-weight:bold;line-height:14px;height:20px;" onclick="kepsOverlayFunctions.submit()" name="Submit" value="Submit">
-              &nbsp;or&nbsp;<a href="javascript:kepsOverlayFunctions.closeOverlay();">Go Back</a>
+              &nbsp;or&nbsp;<button class="btn-ghost" onclick="event.preventDefault();kepsOverlayFunctions.closeOverlay();">Go Back</button>
             </font>
             <input style="visibility:hidden;" name="del" id="keps-del" type="text" maxlength="1420" size="1" value="${window.del || ''}">
             <input style="visibility:hidden;" name="add" id="keps-add" type="text" maxlength="1420" size="1" value="${window.add || ''}">
@@ -3524,7 +3524,7 @@ function showkeps(e) {
             <font style="font-family: Courier; font-size:15px; line-height:12px; font-weight:bold; color:#000000;">
               &nbsp;<br>
               Last Keplerian Data used in Nasa Format&nbsp;${dateFormatted}<br>
-              &nbsp;&nbsp;&nbsp;<a href="javascript:kepsOverlayFunctions.closeOverlay();" style="color:#000000;">Go Back</a><br>
+              &nbsp;&nbsp;&nbsp;<button class="btn-ghost" onclick="event.preventDefault(); kepsOverlayFunctions.closeOverlay();" style="color:#000000;">Go Back</button><br>
               <div style="font-size: 17px;line-height: 18px;padding: 4px 8px;">${tleDisplay}</div>
             </font>
           </div>

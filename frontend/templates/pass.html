@@ -185,7 +185,7 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
         style="position:absolute; width: 22px; height: 22px; top:244px; left: 211px; cursor:pointer;">
         <form name='tstest' method='post' style='margin-bottom:0;margin-top:0;'>
             <input type='Text' style='visibility:hidden' name='timestamp' id='timestamp' value=''>
-            <button onclick="show_calendar('document.tstest.timestamp', document.tstest.timestamp.value);">
+            <button class="btn-th-icon" onclick="event.preventDefault(); show_calendar('document.tstest.timestamp', document.tstest.timestamp.value);">
                 <img id='cal' src='https://i.postimg.cc/gk9sV06M/cal.gif' style="width:16px; height:24px; border:0px;"
                     alt='Click Here to Pick up the timestamp'>
             </button>
@@ -200,7 +200,7 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
              title="Change or set new Grid Locator Insure you have right Timezone and Date/Time on your device. OK! if Home Icon at your place"><span
                 style="color:#00ffff;">Locator</span></button>&nbsp;
         <button class="btn-hash-link" id="reload"
-            onclick='saveMapState();satactivity=satactivity+"RELOAD"; location.reload();'
+            onclick='saveMapState();satactivity=satactivity + "RELOAD";if (!vbasic){location.reload();}'
             title="Reload / Refresh and Update TLEs"><span style="color:#00ffff;">Reload</span></button>&nbsp;
         <button class="btn-hash-link" onclick='event.preventDefault(); showkeps();' Title="Add/Del Satellites - See Keps in use"><span
                 style="color:#00ffff;">&plusmn;Sats</span></button>&nbsp;
@@ -223,7 +223,7 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
             onclick="event.preventDefault();setzoom(8);" style="font-size:17px;">8</button>&nbsp;<button
             title="Zoom x 16" class="btn-hash-link xz" id="z16" onclick="event.preventDefault();setzoom(16);"
             style="font-size:18px;">H</button>
-        <button title="Screen Size" id="sz" onclick="event.preventDefault();screensize();"
+        <button title="Screen Size" class="btn-hash-link" id="sz" onclick="event.preventDefault();screensize();"
             style="cursor:pointer;color:Aqua;font-size:19px;font-weight:bold;">&#9651;</button>
     </div>
     <div class="noprint" id="birds"
@@ -246,7 +246,7 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
     <div class="noprint" id="bubble"
         style="position:absolute;left:570px;top:42px;width:170px;height:60px;visibility:hidden;z-index:7;background-image: url(https://i.postimg.cc/PfvKvDNp/bubble.gif);font-family:Arial,Tahoma;font-size:18px;font-weight:bold;line-height:24px;">
     </div>
-    <div class="noprint" id="printicon"
+    <div class="noprint" id="printicon" class="btn-th-icon"
         style="position:absolute;left:413px;top:272px;width:24px;height:21px;cursor:pointer;z-index:111;border:0px;"><button
             onclick="printpr();"><img src="https://i.postimg.cc/T3tn42pv/printicon.gif"
                 alt="Print this Table, Click Print Preview to see results"
@@ -396,7 +396,7 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
         <p>B:145.825 AX</p><br>
         -- Transmit only Sats --<br>
         <b>NA-15</b> D:137.620 APT<br><b>NA-18</b> D:137.9125 APT<br><b>NA-19</b> D:137.100 APT
-        <br><br><i>http://amsat.org.ar/pass</i>
+        <br><br><i>https://satellittes.browxy.com/pass</i>
     </div>
     <div class="noprint" id="graphics" onclick="satnogs()"
         title="This Graph Shows where  To point your Antenna Green = Above Horizont AOS &uarr; Acquis. of Signal  LOS &darr; Loss of Signal&#13; Click to Check Satnogs"
@@ -404,7 +404,7 @@ window.HOST_URL = `${new URL(window.parent.window.location.href).origin}`;
         <img src="https://i.postimg.cc/W49Sg6Mr/arrow.jpg"
             style="border:2px;border-color:#ffffff;width:180px;height:180px;border-radius: 6px 6px 6px 6px;"
             title="Tracking satellites" alt="Tracking satellites"
-            onclick="javascript:document.location.href='http://lu7abf.org.ar/pass.htm'" />
+            onclick="event.preventDefault();window.parent.window.location.href='https://satellittes.browxy.com/pass'" />
     </div>
     <div class="noprint" id="azel" title="U: Uplink | D: Downlink | B: Beacon"
         style="position:absolute;border:0px;top:264px;left:538px;width:210px;height:0px;line-height:21px;font-family:Tahoma,Arial;font-size:20px;text-align:left;">

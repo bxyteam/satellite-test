@@ -16,7 +16,7 @@ nav_order: 1
 
 ### Web Site
 
-##### <a href="https://satellites.dev.browxy.com">https://satellites.dev.browxy.com</a>
+##### <a href="https://satellites.browxy.com">https://satellites.browxy.com</a>
 
 ### Github Repository
 
