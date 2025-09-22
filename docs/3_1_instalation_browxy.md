@@ -64,7 +64,6 @@ ENTRYPOINT ["/usr/bin/tini", "--"]
 
 # Set the default command
 CMD ["bash", "-c", "/home/satellite/application/dockerStart.sh"]
-
 ```
 #### Docker Login
 * Login with docker credentials
@@ -75,6 +74,7 @@ CMD ["bash", "-c", "/home/satellite/application/dockerStart.sh"]
 
 #### Build and push images to registry
 * Execute install_prod.sh script
+
 ```bash
 echo "Set executions permissions"
 chmod +x install_prod.sh
@@ -83,7 +83,9 @@ chmod +x install_browxy.sh
 echo "Execute production script"
 ./install_prod.sh
 ```
+
 * Or execute the following commands
+
 ```bash
 echo "Building Docker image"
 docker build -f "$DOCKERFILE" -t browxy_satellite .
@@ -137,7 +139,6 @@ services:
 networks:
   compiler_browxy:
     external: true
-
 ```
 
 ### Fill Env File (env.prod)
@@ -202,7 +203,6 @@ DOCKER_REGISTRY=docker-registry.beta.browxy.com
 
 # configuration ID dev | qa | production
 satelliteConfigId=production
-
 ```
 
 ##### Up Docker Container
